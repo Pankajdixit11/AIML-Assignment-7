@@ -11,9 +11,9 @@ The primary objective of this project is to segment shopping mall customers into
 ** Dataset Name: ** Mall Customer Segmentation Dataset
 ** Dataset Link: ** Kaggle - Mall Customer Segmentation
 
-** Dataset Description: **
-** Total Records: ** 200 customers
-** Features: **
+Dataset Description: 
+Total Records: 200 customers
+Features: 
 - Customer ID: Unique identifier for each customer
 - Gender: Male/Female
 - Age: Customer age in years
@@ -25,61 +25,49 @@ The primary objective of this project is to segment shopping mall customers into
 - import pandas as pd
 - import numpy as np
 
-** Data visualization **
+#### Data visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-** Machine Learning **
+#### Machine Learning
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 
-** Utilities **
+#### Utilities
 import warnings
 warnings.filterwarnings('ignore')
 
 ### 🔧 Methodology:
 1. Data Understanding
-Loaded the dataset and performed exploratory data analysis
-
-Identified numerical and categorical features
-
-Generated summary statistics to understand data distribution
+- Loaded the dataset and performed exploratory data analysis
+- Identified numerical and categorical features
+- Generated summary statistics to understand data distribution
 
 2. Data Preprocessing
-Missing Values: Checked and confirmed no missing values
-
-Feature Removal: Dropped CustomerID as it's not relevant for clustering
-
-Encoding: Encoded Gender using LabelEncoder (0=Female, 1=Male)
-
-Standardization: Applied StandardScaler to normalize features for K-Means
+- Missing Values: Checked and confirmed no missing values
+- Feature Removal: Dropped CustomerID as it's not relevant for clustering
+- Encoding: Encoded Gender using LabelEncoder (0=Female, 1=Male)
+- Standardization: Applied StandardScaler to normalize features for K-Means
 
 3. Model Development
-K-Means Clustering
-Used Elbow Method to determine optimal number of clusters (K=5)
-
-Trained K-Means model with K=5 clusters
-
-Assigned cluster labels to each customer
-
-Principal Component Analysis (PCA)
-Applied PCA to reduce 4-dimensional data to 2 principal components
-
-Preserved 68.22% of total variance
-
-Used for visualization and interpretation
+- K-Means Clustering
+- Used Elbow Method to determine optimal number of clusters (K=5)
+- Trained K-Means model with K=5 clusters
+- Assigned cluster labels to each customer
+- Principal Component Analysis (PCA)
+- Applied PCA to reduce 4-dimensional data to 2 principal components
+- Preserved 68.22% of total variance
+- Used for visualization and interpretation
 
 4. Evaluation
-Internal Validation: Silhouette Score (peaked at K=5)
-
-Visual Validation: Scatter plots showing cluster separation
-
-Business Validation: Interpretable clusters with distinct characteristics
+- Internal Validation: Silhouette Score (peaked at K=5)
+- Visual Validation: Scatter plots showing cluster separation
+- Business Validation: Interpretable clusters with distinct characteristics
 
 ### PCA Results
-** Explained Variance: **
+##### Explained Variance: 
 - PC1: 35.73% of variance (spending behavior dominant)
 - PC2: 32.49% of variance (income and gender patterns)
 - Total Variance Explained: 68.22%
