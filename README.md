@@ -9,7 +9,9 @@ The primary objective of this project is to segment shopping mall customers into
 
 ## 📊 Dataset
 Dataset Name: Mall Customer Segmentation Dataset
-Dataset Link: Kaggle - Mall Customer Segmentation
+
+Dataset Link:
+[Kaggle - Mall Customer Segmentation](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)
 
 Dataset Description: 
 Total Records: 200 customers
